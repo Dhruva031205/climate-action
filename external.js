@@ -1,4 +1,4 @@
-const facts = [
+ facts = new Array[
     "The Earth’s average temperature has risen by 1.2°C since the late 19th century.",
     "Greenhouse gases can stay in the atmosphere for hundreds of years.",
     "Deforestation accounts for nearly 20% of global carbon emissions.",
@@ -9,15 +9,9 @@ const facts = [
 // Function to display a random fact
 function displayRandomFact() {
     const randomFact = facts[Math.floor(Math.random() * facts.length)];
-    document.getElementById("random_fact").randomFact;
+    document.getElementById("random_fact").innerHTML= randomFact;
 }
-// Example: Array of climate action tips
-const climateTips = [
-  "Switch to renewable energy sources",
-  "Reduce water waste",
-  "Plant trees in your community",
-  "Support eco-friendly businesses",
-];
+
 
 
 
@@ -53,3 +47,9 @@ function validate(){
 					valid= false; // flag is false
 					
 				}
+				//show the msge only if value == false
+				if(!valid){ //!valid means "not true"
+					document.getElementById("details").innerHTML= msge;
+				}
+				return valid;
+}
